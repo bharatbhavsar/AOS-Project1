@@ -5,7 +5,19 @@ Build a distributed system consisting of n nodes arranged in a certain topology.
 
 This is not BFS. As network is asynchronous, message transmission time is random and leads to not forming BFS.
 
+
+Algorithm:
+
+1. Root node starts spanning tree construction by setting parent =*
+2. All other node
+3.  IF message received 
+4.      IF(parent==-1) send ACK back and set parent = message.nodeID
+5.      Else send NACK
+6.  If (Message == ACK) children++ and childrenArray[children-1] = message.nodeID
+7. If (Number of request sent == number ACK + Number of NACK) Output Parent and children
+
 Teminology and Technology used:
+
 Distributed system
 Asynchronous network
 Spanning tree construction
